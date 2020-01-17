@@ -11,6 +11,7 @@ def list(songs)
 end
 
 def play(songs)
+  match = 
   puts "Please enter a song name or number:"
   resp = gets.strip
   if resp.match()
