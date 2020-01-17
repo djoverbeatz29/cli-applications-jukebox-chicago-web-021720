@@ -28,7 +28,7 @@ def play(songs)
   resp = gets.strip
   song_index = nil
   if resp.match("^[0-9]+$")
-    song_index = (resp.to_i >= 0 && resp.to_i < songs.length)? resp.to_i : nil
+    song_index = (resp.to_i >= 1 && resp.to_i <= songs.length)? resp.to_i - 1 : nil
   else
     song_index = songs.find_index(resp)
   end
