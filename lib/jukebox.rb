@@ -13,4 +13,6 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   resp = gets.chomp
-  if 
+  if resp.to_i
+    if resp.to_i >= 0 && resp.to_i < songs.length
+      
