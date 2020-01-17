@@ -8,5 +8,5 @@ end
 
 def list(songs)
   
-  songs.each{ |song| puts songs }
+  songs.each_with_index{ |song| puts songs }
 end
