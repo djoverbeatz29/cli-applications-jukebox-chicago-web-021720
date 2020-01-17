@@ -11,9 +11,9 @@ def list(songs)
 end
 
 def play(songs)
-  reg = "[0-#{songs.length-1}]"
   puts "Please enter a song name or number:"
   resp = gets.strip
-  if resp.match(reg)
-    if resp.to_i >= 0 && resp.to_i < songs.length
-      
+  if resp.match("^[0-9]+$") && songs[resp.to_i]
+    puts "Playing #{songs[resp.to_i]}"
+  elsif songs.find_index(resp)
+    puts ""
