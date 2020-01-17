@@ -32,6 +32,7 @@ def exit_jukebox
 end
 
 def run
+  loop do
   help
   puts "Please enter a command:"
   case gets.strip
@@ -44,4 +45,5 @@ def run
     when "exit"
       exit_jukebox
       break
-    else
+    end
+    
