@@ -5,3 +5,5 @@ def say_hello
   puts result
   result
 end
+
+say_hello
