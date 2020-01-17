@@ -60,3 +60,5 @@ def run
     end
   end
 end
+
+run
