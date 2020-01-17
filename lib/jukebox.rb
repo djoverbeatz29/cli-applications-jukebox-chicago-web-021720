@@ -25,9 +25,9 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   resp = gets.strip
-  song_title = nil
+  song_index = nil
   if resp.match("^[0-9]+$")
-    song_title = songs[resp.to_i]
+    song_index = songs[resp.to_i]
   else
     song_title = songs.find_index(resp)
   end
