@@ -35,7 +35,7 @@ def play(songs)
   
   if song_index
     puts "Playing #{songs[song_index]}"
-    break
+    # break
   else
     puts "Invalid input, please try again"
   end
