@@ -23,23 +23,23 @@ def list(songs)
 end
 
 def play(songs)
-  loop do
-    puts "Please enter a song name or number:"
-    resp = gets.strip
-    song_index = nil
-    if resp.match("^[0-9]+$")
-      song_index = (resp.to_i >= 0 && resp.to_i < songs.length)? resp.to_i : nil
-    else
-      song_index = songs.find_index(resp)
-    end
-    
-    if song_index
-      puts "Playing #{songs[song_index]}"
-      break
-    else
-      puts "Invalid input, please try again"
-    end
+  # loop do
+  puts "Please enter a song name or number:"
+  resp = gets.strip
+  song_index = nil
+  if resp.match("^[0-9]+$")
+    song_index = (resp.to_i >= 0 && resp.to_i < songs.length)? resp.to_i : nil
+  else
+    song_index = songs.find_index(resp)
   end
+  
+  if song_index
+    puts "Playing #{songs[song_index]}"
+    break
+  else
+    puts "Invalid input, please try again"
+  end
+  # end
 end
 
 def exit_jukebox
