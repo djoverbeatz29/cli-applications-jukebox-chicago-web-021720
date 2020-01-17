@@ -11,9 +11,9 @@ def list(songs)
 end
 
 def play(songs)
-  match = 
+  reg = "[0-#{songs.length-1}]"
   puts "Please enter a song name or number:"
   resp = gets.strip
-  if resp.match()
+  if resp.match(reg)
     if resp.to_i >= 0 && resp.to_i < songs.length
       
