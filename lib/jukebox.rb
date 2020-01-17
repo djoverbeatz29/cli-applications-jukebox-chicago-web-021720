@@ -35,10 +35,12 @@ def play(songs)
     
     if song_index
       puts "Playing #{songs[song_index]}"
+      break
     else
       puts "Invalid input, please try again"
     end
   end
+end
 
 def exit_jukebox
   puts "Goodbye"
