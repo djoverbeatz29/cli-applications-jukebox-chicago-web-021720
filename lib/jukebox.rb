@@ -13,7 +13,16 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   resp = gets.strip
-  if resp.match("^[0-9]+$") && songs[resp.to_i]
-    puts "Playing #{songs[resp.to_i]}"
-  elsif songs.find_index(resp)
-    puts ""
+  song_title = nil
+  if resp.match("^[0-9]+$")
+    song_title = songs[resp.to_i]
+  else
+    song_title = songs.find_index(resp)
+  end
+  
+  if song_title
+    puts "Playing #{song_title}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
