@@ -42,4 +42,7 @@ def run
       play(songs)
     when "exit"
       exit_jukebox
+      break
+    else
+      help
     
