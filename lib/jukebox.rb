@@ -29,11 +29,11 @@ def play(songs)
   if resp.match("^[0-9]+$")
     song_index = songs[resp.to_i]
   else
-    song_title = songs.find_index(resp)
+    song_index = songs.find_index(resp)
   end
   
-  if song_title
-    puts "Playing #{song_title}"
+  if song_index
+    puts "Playing #{songs[song_index]}"
   else
     puts "Invalid input, please try again"
   end
