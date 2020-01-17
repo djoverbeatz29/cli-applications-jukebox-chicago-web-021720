@@ -45,7 +45,7 @@ end
 
 def run(songs)
   loop do
-  help
+  # help
   puts "Please enter a command:"
   case gets.strip
     when "help"
